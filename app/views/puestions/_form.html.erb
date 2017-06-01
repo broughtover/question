@@ -1,0 +1,32 @@
+<%= form_with(model: puestion, local: true) do |form| %>
+  <% if puestion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(puestion.errors.count, "error") %> prohibited this puestion from being saved:</h2>
+
+      <ul>
+      <% puestion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.number_field :title, id: :puestion_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_field :message, id: :puestion_message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puestion %>
+    <%= form.text_field :puestion, id: :puestion_puestion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

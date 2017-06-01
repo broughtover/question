@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @puestion.title %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @puestion.message %>
+</p>
+
+<p>
+  <strong>Puestion:</strong>
+  <%= @puestion.puestion %>
+</p>
+
+<%= link_to 'Edit', edit_puestion_path(@puestion) %> |
+<%= link_to 'Back', puestions_path %>
